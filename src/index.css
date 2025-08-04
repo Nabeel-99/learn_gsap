@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87); */
+  /* background-color: #242424; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+.background {
+  background-image: url("/images/asfalt-light.png");
+}
+
+body {
+  /* margin: 0;
+  display: flex; */
+  background-color: black;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button {
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    /* background-color: #ffffff; */
+  }
+  a:hover {
+    color: #747bff;
+  }
+}
+
+/* Video Inversion Effects */
+.video-inverted {
+  /* Option 1: Full inversion - inverts all colors */
+  filter: invert(0);
+
+  /* Option 2: Partial inversion with hue rotation */
+  /* filter: invert(0) hue-rotate(180deg); */
+
+  /* Option 3: Invert with brightness adjustment */
+  /* filter: invert(1) brightness(0.8); */
+
+  /* Option 4: Invert with contrast adjustment */
+  /* filter: invert(1) contrast(1.2); */
+
+  /* Option 5: Invert with saturation adjustment */
+  /* filter: invert(1) saturate(1.5); */
+
+  /* Option 6: Invert with blur for dreamy effect */
+  /* filter: invert(1) blur(1px); */
+
+  /* Option 7: Invert with sepia for vintage look */
+  /* filter: invert(1) sepia(0.3); */
+
+  /* Option 8: Invert with grayscale */
+  /* filter: invert(1) grayscale(0.5); */
+}
+
+/* Alternative: Invert only specific parts */
+/* .video-inverted-partial {
+  filter: invert(1);
+  mix-blend-mode: difference;
+} */
+
+/* Alternative: Invert with background blend */
+/* .video-inverted-blend {
+  filter: invert(1);
+  mix-blend-mode: multiply;
+} */
+
+/* Alternative: Invert with overlay effect */
+/* .video-inverted-overlay {
+  filter: invert(1);
+  mix-blend-mode: overlay;
+} */
+
+/* Alternative: Invert with screen blend */
+/* .video-inverted-screen {
+  filter: invert(1);
+  mix-blend-mode: screen;
+} */
