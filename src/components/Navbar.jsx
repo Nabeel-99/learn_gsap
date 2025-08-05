@@ -23,7 +23,7 @@ const Navbar = () => {
     );
   }, []);
   return (
-    <nav className="flex p-4  fixed top-0  items-center justify-between w-full">
+    <nav className="flex flex-col gap-3 lg:flex-row p-4 z-50  fixed top-0  items-center justify-between w-full">
       <div className="flex items-center gap-2">
         <img alt="logo" src="./images/logo.png" />
         <p>React + GSAP</p>
