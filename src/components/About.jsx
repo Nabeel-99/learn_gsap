@@ -15,11 +15,11 @@ const About = () => {
     const aboutPara = new SplitText(".about-para, .rating", {
       type: "words",
     });
-    gsap.from(customTitle.words, {
+    gsap.from(aboutPara.words, {
       stagger: 0.06,
       duration: 1.8,
       ease: "expo.out",
-      y: 100,
+      y: 10,
       opacity: 0,
       scrollTrigger: {
         trigger: "#about",
@@ -35,12 +35,12 @@ const About = () => {
       },
     });
     gridTl
-      .from(aboutPara.words, {
+      .from(customTitle.words, {
         duration: 1,
         stagger: 0.06,
         opacity: 0,
         ease: "expo.out",
-        y: 10,
+        y: 30,
       })
       .from(
         ".top-grid > div, .bottom-grid > div",
@@ -51,14 +51,14 @@ const About = () => {
           duration: 1,
           ease: "power1.inOut",
         },
-        1
+        "-=0.5"
       );
   }, []);
 
   return (
     <section
       id="about"
-      className="flex flex-col gap-6 h-full w-full px-4 lg:px-0 lg:max-w-6xl pt-10"
+      className="flex flex-col gap-6 h-full container w-full px-4 lg:px-0 lg:max-w-6xl pt-10"
     >
       <div className="flex flex-col lg:flex-row justify-between w-full lg:max-w-6xl  mx-auto">
         <div className="flex flex-col lg:w-2/4 gap-6">

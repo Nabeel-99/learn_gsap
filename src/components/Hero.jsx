@@ -46,13 +46,13 @@ const Hero = () => {
 
     //   video
     const startValue = isMobile ? "top 50%" : "center 60%";
-    const endValue = isMobile ? "bottom -30%" : "bottom 18%";
-    // gsap.from("video", {
-    //   y: 500,
-    //   opacity: 0,
-    //   duration: 1.3,
-    //   ease: "bounce.out",
-    // });
+    const endValue = isMobile ? "bottom -30%" : "bottom 10%";
+    gsap.from("video", {
+      y: -10,
+      opacity: 0,
+      duration: 1.3,
+      ease: "power2.inOut",
+    });
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "video",
@@ -77,7 +77,7 @@ const Hero = () => {
         id="hero"
         className="flex flex-col items-center lg:gap-40 pt-32 h-full relative w-full"
       >
-        <div className="absolute inset-0 top-0 left-0 h-full w-full background " />
+        <div className="absolute inset-0 top-0 left-0 h-full  background " />
         <img
           className="left-leaf w-32 lg:w-auto absolute left-0 -z-10 top-10"
           src="./images/hero-left-leaf.png"
@@ -94,7 +94,7 @@ const Hero = () => {
           MOJITO
         </h1>
 
-        <div className="flex flex-col gap-6 lg:flex-row  lg:justify-between lg:max-w-6xl w-full ">
+        <div className="flex flex-col gap-6 lg:flex-row container mx-auto  lg:justify-between lg:max-w-6xl w-full ">
           <div className="flex w-full flex-col items-center lg:items-start   lg:w-1/5 gap-2">
             <p className="para text-lg">Cool. Crisp. Classic.</p>
             <p className="para font-bold text-4xl">Sip the Spirit of Summer</p>
@@ -108,7 +108,7 @@ const Hero = () => {
           </div>
         </div>
       </section>
-      <div className="absolute top-40  -z-50 ">
+      <div className="absolute top-40   overflow-hidden -z-50 ">
         <video
           ref={videoRef}
           src="./videos/output.mp4"

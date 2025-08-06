@@ -7,15 +7,16 @@ import gsap from "gsap";
 const Art = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
   useGSAP(() => {
-    const startValue = isMobile ? "top 20%" : "top 10%";
+    const startValue = isMobile ? "top 20%" : "top 20%";
 
     const maskTl = gsap.timeline({
       scrollTrigger: {
         trigger: "#art",
-        scrub: 1.5,
+        scrub: 2.5,
         start: startValue,
-        end: "top top",
+        end: "+=100%",
         pin: true,
+        pinSpacing: true,
       },
     });
     maskTl
@@ -31,8 +32,9 @@ const Art = () => {
         scale: 1.3,
         maskPosition: "center",
         maskSize: "400%",
-        duration: 1.8,
-        ease: "power1.inOut",
+        overflow: "hidden",
+        duration: 4,
+        ease: "power3.inOut",
       })
       .from(".masked-texts", {
         y: 10,
@@ -44,14 +46,14 @@ const Art = () => {
   return (
     <section
       id="art"
-      className="flex relative flex-col overflow-hidden  items-center gap-4 h-full mt-24 lg:mt-60 w-full"
+      className="flex relative container  flex-col overflow-hidden min-h-[100vh] p-10  items-center gap-4  mt-24 lg:mt-60 w-full"
     >
-      <div className="absolute left-1/2 top-1/2 overflow-hidden -translate-x-1/2 -translate-y-1/2 size-[600px] -z-10 bg-radial-[at_50%_50%] from-[#434343] to-transparent rounded-full blur-3xl "></div>
-      <div className="absolute -z-10 rounded-3xl  overflow-hidden top-0 w-[90vw]  lg:w-[60vw] h-[50vh] lg:h-[60vh]  lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 ">
+      <div className="absolute left-1/2 top-1/2 overflow-hidden -translate-x-1/2 -translate-y-1/2 size-[600px] -z-10 bg-radial-[at_50%_50%] from-[#434343] to-transparent rounded-full blur-2xl "></div>
+      <div className="absolute -z-10 rounded-3xl  overflow-hidden top-0  w-full  lg:w-[60vw] h-[50vh] lg:h-[60vh]  lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 ">
         <img
           src="./images/under-img.jpg"
           alt=""
-          className="w-full h-full rounded-3xl masked-img  overflow-hidden object-cover mask-size-[100%] lg:mask-size-[50%] mask-no-repeat mask-center mask-[url('/images/mask-img.png')]  "
+          className="w-full h-full rounded-3xl masked-img  overflow-hidden object-cover mask-size-[40%] lg:mask-size-[50%] mask-no-repeat mask-center mask-[url('/images/mask-img.png')]  "
         />
       </div>
       <p className="text-[80px] will-fade lg:text-[200px] tracking-tighter">

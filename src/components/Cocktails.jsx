@@ -37,10 +37,10 @@ const Cocktails = () => {
   return (
     <section
       id="cocktail"
-      className="background min-h-dvh relative overflow-hidden px-4 lg:px-0   w-full flex pt-20 justify-center "
+      className="background min-h-screen relative overflow-hidden px-4 lg:px-0   w-full flex pt-20 justify-center "
     >
       <img
-        className="absolute -left-20 -z-10 bottom-0 w-32 lg:w-auto  cocktail-left-leaf"
+        className="absolute left-0 lg:-left-20 -z-10 bottom-0 w-32 lg:w-auto  cocktail-left-leaf"
         src="./images/cocktail-left-leaf.png"
       />
       <img
@@ -48,7 +48,7 @@ const Cocktails = () => {
         src="./images/cocktail-right-leaf.png"
       />
       <div className="flex max-w-6xl justify-between w-full">
-        <div className="flex flex-col lg:flex-row justify-between  w-full">
+        <div className="flex flex-col gap-10 lg:flex-row lg:justify-between  w-full">
           <div className="flex flex-col gap-4">
             <p className="text-xl cocktail-title italic">
               Most popular cocktails
